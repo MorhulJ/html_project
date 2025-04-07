@@ -17,8 +17,8 @@ main {
   position: sticky;
   top: 0;
   background-color: rgba(255, 255, 255, 0.5);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   padding: 0.3em 15px;
   border-bottom: 2px solid white;
 }
@@ -55,6 +55,11 @@ main {
   justify-content: center;
   gap: 10%;
   padding-bottom: 6em;
+}
+
+.info__img {
+  width: 1.7em;
+  margin-right: 0.5em;
 }
 
 .entering {
@@ -102,16 +107,12 @@ main {
 
 .about-container {
   text-align: center;
-  background-color: #f9fafb;
+  background-color: #f8f8f8;
   padding-top: 6em;
 }
-.about-container__title {
-  font-size: 0.9em;
-  display: inline-block;
-  background-color: #e5e7eb;
-  padding: 0.4em 1.55em;
-  border-radius: 25px;
-  margin-bottom: 3em;
+
+#skills {
+  margin-bottom: 1em;
 }
 
 .content-container {
@@ -120,32 +121,66 @@ main {
   justify-content: center;
   gap: 12.5%;
 }
-.content-container .content__description-container {
+.content__title {
+  font-size: 0.9em;
+  font-weight: bold;
+  display: inline-block;
+  background-color: #e5e7eb;
+  padding: 0.4em 1.55em;
+  border-radius: 25px;
+  margin-bottom: 3em;
+}
+.content__description-container {
   text-align: start;
   max-width: 550px;
 }
-.content-container .content__description-title {
+.content__description-title {
   font-size: 1.8em;
   font-weight: 550;
   padding-bottom: 0.5em;
 }
-.content-container .content__description {
+.content__description {
   padding-bottom: 0.9em;
 }
-.content-container .content__img-container {
+.content__img-container {
   margin-top: 3em;
   position: relative;
 }
-.content-container .content__img__shadow {
+.content__img__shadow {
   width: 25em;
   height: 29.5em;
   background-color: #e5e7eb;
 }
-.content-container .content__img {
+.content__img {
   border: 10px solid white;
   position: absolute;
   top: -3.2em;
   left: 2.8em;
+}
+
+.skills-container {
+  background-color: white;
+  padding-top: 5.5em;
+  margin-top: 3em;
+}
+.skills__description {
+  font-size: 1.3em;
+}
+.skills__apps {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(8, auto);
+  gap: 3.5%;
+}
+.skills__description {
+  padding-bottom: 1.5em;
+}
+
+.app {
+  align-self: center;
+}
+.app__name {
+  font-size: 1.2em;
 }
 
 .underlined {
@@ -173,6 +208,11 @@ li {
     width: 22em;
     top: -2.8em;
     left: 2.5em;
+  }
+  .skills__apps {
+    grid-template-columns: repeat(6, auto);
+    justify-content: unset;
+    gap: 0;
   }
 }
 @media (width < 768px) {
@@ -243,6 +283,9 @@ li {
     width: 18em;
     top: -1.8em;
     left: 1.5em;
+  }
+  .skills__apps {
+    grid-template-columns: repeat(3, auto);
   }
   ul {
     grid-template-columns: auto;

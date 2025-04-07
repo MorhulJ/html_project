@@ -17,7 +17,7 @@ main {
     position: sticky;
     top: 0;
     background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     padding: 0.3em 15px;
     border-bottom: 2px solid white;
 }
@@ -47,13 +47,18 @@ main {
     border-radius: 12px;
 }
 
-git remote -v.title-container {
+.title-container {
     padding-top: 6.5em;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: center;
     gap: 10%;
     padding-bottom: 6em;
+}
+
+.info__img{
+    width: 1.7em;
+    margin-right: 0.5em;
 }
 
 .entering {
@@ -104,58 +109,90 @@ git remote -v.title-container {
     margin-top: 2em;
 }
 
-.about-container {
+.about-container{
     text-align: center;
-    background-color: #f9fafb;
+    background-color: #f8f8f8;
     padding-top: 6em;
+    }
 
+#skills{
+    margin-bottom: 1em;
+}
+
+.content{
+        &-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 12.5%;
+    }
     &__title {
         font-size: 0.9em;
+        font-weight: bold;
         display: inline-block;
         background-color: #e5e7eb;
         padding: 0.4em 1.55em;
         border-radius: 25px;
         margin-bottom: 3em;
     }
-}
-
-.content-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center;
-    gap: 12.5%;
-
-    .content__description-container {
+    &__description-container {
         text-align: start;
         max-width: 550px;
     }
 
-    .content__description-title {
+    &__description-title {
         font-size: 1.8em;
         font-weight: 550;
         padding-bottom: 0.5em;
     }
 
-    .content__description {
+    &__description {
         padding-bottom: 0.9em;
     }
 
-    .content__img-container {
+    &__img-container {
         margin-top: 3em;
         position: relative;
     }
 
-    .content__img__shadow {
+    &__img__shadow {
         width: 25em;
         height: 29.5em;
         background-color: #e5e7eb;
     }
 
-    .content__img {
+    &__img {
         border: 10px solid white;
         position: absolute;
         top: -3.2em;
         left: 2.8em;
+    }
+}
+
+.skills{
+    &-container{
+        background-color: white;
+        padding-top: 5.5em;
+        margin-top: 3em;
+    }
+    &__description{
+        font-size: 1.3em;
+    }
+    &__apps{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(8, auto);
+        gap: 3.5%;
+    }
+    &__description{
+        padding-bottom: 1.5em;
+    }
+}
+
+.app{
+    align-self: center;
+    &__name{
+        font-size: 1.2em;
     }
 }
 
@@ -186,6 +223,13 @@ li {
         width: 22em;
         top: -2.8em;
         left: 2.5em;
+    }
+    .skills{
+        &__apps{
+            grid-template-columns: repeat(6, auto);
+            justify-content: unset;
+            gap: 0;
+        }
     }
 }
 
@@ -274,7 +318,11 @@ li {
         top: -1.8em;
         left: 1.5em;
     }
-
+    .skills{
+        &__apps{
+            grid-template-columns: repeat(3, auto);
+        }
+    }
     ul {
         grid-template-columns: auto;
     }
