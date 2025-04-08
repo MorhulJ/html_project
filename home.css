@@ -90,6 +90,11 @@ main {
   left: -2.8em;
 }
 
+.section__description {
+  font-size: 1.3em;
+  padding-bottom: 1em;
+}
+
 .green-dot {
   display: inline-block;
   background-color: rgb(1, 184, 1);
@@ -111,8 +116,8 @@ main {
   padding-top: 6em;
 }
 
-#skills {
-  margin-bottom: 1em;
+#about {
+  margin-bottom: 3em;
 }
 
 .content-container {
@@ -128,7 +133,7 @@ main {
   background-color: #e5e7eb;
   padding: 0.4em 1.55em;
   border-radius: 25px;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 .content__description-container {
   text-align: start;
@@ -141,6 +146,13 @@ main {
 }
 .content__description {
   padding-bottom: 0.9em;
+}
+.content__description__list {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.content__description__list__element {
+  padding-right: 1.2em;
 }
 .content__img-container {
   margin-top: 3em;
@@ -162,9 +174,7 @@ main {
   background-color: white;
   padding-top: 5.5em;
   margin-top: 3em;
-}
-.skills__description {
-  font-size: 1.3em;
+  padding-bottom: 4em;
 }
 .skills__apps {
   display: grid;
@@ -183,17 +193,39 @@ main {
   font-size: 1.2em;
 }
 
+.expirience__site-container-container {
+  display: grid;
+  justify-content: center;
+}
+
+.experience-container {
+  margin-top: 7em;
+}
+.experience__site-container {
+  box-shadow: 0 3px 0.5em 1px rgb(224, 224, 224);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  gap: 10%;
+  max-width: 1200px;
+  padding: 2em 2em 1em 2em;
+  margin-bottom: 3.5em;
+}
+.experience__site__content {
+  text-align: start;
+}
+.experience__site__content__title {
+  font-weight: bold;
+  margin-left: 1.5em;
+  padding-bottom: 0.5em;
+}
+.experience__site__content__list {
+  max-width: 560px;
+}
+
 .underlined {
   text-decoration: underline;
-}
-
-ul {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
-li {
-  padding-right: 1.2em;
 }
 
 @media (width < 1024px) {
@@ -287,7 +319,39 @@ li {
   .skills__apps {
     grid-template-columns: repeat(3, auto);
   }
-  ul {
+  .experience-container {
+    margin-top: 7em;
+  }
+  .experience__site-container {
+    box-shadow: 0 3px 0.5em 1px rgb(224, 224, 224);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: start;
+    gap: 0;
+    max-width: 1200px;
+    padding: 2em 2em 1em 2em;
+    margin-bottom: 3.5em;
+  }
+  .experience__site__date {
+    grid-row: 2;
+    text-align: start;
+    padding-top: 1.5em;
+  }
+  .experience__site__content {
+    text-align: start;
+  }
+  .experience__site__content__title {
+    font-weight: bold;
+    margin-left: 0;
+  }
+  .experience__site__content__list {
+    max-width: 560px;
+  }
+  .experience__site__content__list__element {
+    margin-left: -1.7em;
+  }
+  .content__description__list {
     grid-template-columns: auto;
   }
 }/*# sourceMappingURL=home.css.map */

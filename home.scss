@@ -94,6 +94,13 @@ main {
     }
 }
 
+.section{
+    &__description{
+        font-size: 1.3em;
+        padding-bottom: 1em;
+    }
+}
+
 .green-dot {
     display: inline-block;
     background-color: rgb(1, 184, 1);
@@ -115,8 +122,8 @@ main {
     padding-top: 6em;
     }
 
-#skills{
-    margin-bottom: 1em;
+#about{
+    margin-bottom: 3em;
 }
 
 .content{
@@ -133,7 +140,7 @@ main {
         background-color: #e5e7eb;
         padding: 0.4em 1.55em;
         border-radius: 25px;
-        margin-bottom: 3em;
+        margin-bottom: 1em;
     }
     &__description-container {
         text-align: start;
@@ -148,6 +155,13 @@ main {
 
     &__description {
         padding-bottom: 0.9em;
+        &__list{
+            display: grid;
+            grid-template-columns: auto auto;
+            &__element{
+                padding-right: 1.2em;
+            }
+        }
     }
 
     &__img-container {
@@ -174,9 +188,7 @@ main {
         background-color: white;
         padding-top: 5.5em;
         margin-top: 3em;
-    }
-    &__description{
-        font-size: 1.3em;
+        padding-bottom: 4em;
     }
     &__apps{
         display: grid;
@@ -196,17 +208,43 @@ main {
     }
 }
 
+.expirience__site-container-container{
+    display: grid;
+    justify-content: center;
+}
+
+.experience{
+    &-container{
+        margin-top: 7em;
+    }
+    &__site{
+        &-container{
+            box-shadow: 0 3px 0.5em 1px rgb(224, 224, 224);
+            border-radius: 15px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: center;
+            gap: 10%;
+            max-width: 1200px;
+            padding: 2em 2em 1em 2em;
+            margin-bottom: 3.5em;
+        }
+        &__content{
+            text-align: start;
+            &__title{
+                font-weight: bold;
+                margin-left: 1.5em;
+                padding-bottom: 0.5em;
+            }
+            &__list{
+                max-width: 560px;
+            }
+        }
+    }
+}
+
 .underlined {
     text-decoration: underline;
-}
-
-ul {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-li {
-    padding-right: 1.2em;
 }
 
 @media (width < 1024px) {
@@ -323,7 +361,43 @@ li {
             grid-template-columns: repeat(3, auto);
         }
     }
-    ul {
+    .experience{
+        &-container{
+            margin-top: 7em;
+        }
+        &__site{
+            &-container{
+                box-shadow: 0 3px 0.5em 1px rgb(224, 224, 224);
+                border-radius: 15px;
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: start;
+                gap: 0;
+                max-width: 1200px;
+                padding: 2em 2em 1em 2em;
+                margin-bottom: 3.5em;
+            }
+            &__date{
+                grid-row: 2;
+                text-align: start;
+                padding-top: 1.5em;
+            }
+            &__content{
+                text-align: start;
+                &__title{
+                    font-weight: bold;
+                    margin-left: 0;
+                }
+                &__list{
+                    max-width: 560px;
+                    &__element{
+                        margin-left: -1.7em;
+                    }
+                }
+            }
+        }
+    }
+    .content__description__list {
         grid-template-columns: auto;
     }
 }
