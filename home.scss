@@ -118,7 +118,6 @@ main {
 
 .about-container{
     text-align: center;
-    background-color: #f8f8f8;
     padding-top: 6em;
     }
 
@@ -216,6 +215,7 @@ main {
 .experience{
     &-container{
         margin-top: 7em;
+        margin-bottom: 8em;
     }
     &__site{
         &-container{
@@ -239,6 +239,55 @@ main {
             &__list{
                 max-width: 560px;
             }
+        }
+    }
+}
+
+.work{
+    display: grid;
+    grid-template-columns: auto auto;
+    box-shadow: 0 3px 0.5em 1px rgb(224, 224, 224);
+    border-radius: 15px;
+    padding: 4em 2em 2em 2em;
+    margin-bottom: 3em;
+    max-width: 1100px;
+    gap: 15%;
+    &-container{
+        &-container{
+            display: grid;
+            justify-content: center;
+        }
+    }
+    &__img{
+        max-width: 100%;
+        box-shadow: 0 3px 0.5em 1px rgb(224, 224, 224);
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+        &:hover{
+            transform: scale(1.03);
+        }
+    }
+    &__description{
+        padding-bottom: 1em;
+        &__element{
+            background-color: #e5e7eb;
+            border-radius: 1em;
+            padding: 0.3em 1.5em;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-right: 0.5em;
+        }
+        &-container{
+            text-align: left;
+        }
+        &__title{
+            padding-bottom: 1em;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        &__link{
+            padding-top: 1em;
+            display: block;
         }
     }
 }
@@ -362,20 +411,11 @@ main {
         }
     }
     .experience{
-        &-container{
-            margin-top: 7em;
-        }
         &__site{
             &-container{
-                box-shadow: 0 3px 0.5em 1px rgb(224, 224, 224);
-                border-radius: 15px;
-                display: grid;
                 grid-template-columns: auto;
                 justify-content: start;
                 gap: 0;
-                max-width: 1200px;
-                padding: 2em 2em 1em 2em;
-                margin-bottom: 3.5em;
             }
             &__date{
                 grid-row: 2;
@@ -385,15 +425,60 @@ main {
             &__content{
                 text-align: start;
                 &__title{
-                    font-weight: bold;
                     margin-left: 0;
                 }
                 &__list{
-                    max-width: 560px;
                     &__element{
                         margin-left: -1.7em;
                     }
                 }
+            }
+        }
+    }
+    .work{
+        margin-top: -2em;
+        grid-template-columns: auto;
+        gap: 0;
+        &-container{
+            &-container{
+                display: grid;
+                justify-content: center;
+            }
+        }
+        &__img{
+            width: 100%;
+            box-shadow: 0 3px 0.5em 1px rgb(224, 224, 224);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            &-container{
+                grid-row: 1;
+                padding-bottom: 5em;
+            }
+            &:hover{
+                transform: scale(1.03);
+            }
+        }
+        &__description{
+            padding-bottom: 1em;
+            &__element{
+                background-color: #e5e7eb;
+                border-radius: 1em;
+                padding: 0.3em 1.5em;
+                font-size: 0.9em;
+                display: inline-block;
+                margin-right: 0.5em;
+            }
+            &-container{
+                text-align: left;
+            }
+            &__title{
+                padding-bottom: 1em;
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+            &__link{
+                padding-top: 1em;
+                display: block;
             }
         }
     }
