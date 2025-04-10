@@ -191,6 +191,12 @@ main {
 .app__name {
   font-size: 1.2em;
 }
+.app__img {
+  transition: transform 0.3s ease;
+}
+.app__img:hover {
+  transform: scale(1.1);
+}
 
 .expirience__site-container-container {
   display: grid;
@@ -247,6 +253,9 @@ main {
 .work__img:hover {
   transform: scale(1.03);
 }
+.work__img-container {
+  align-self: center;
+}
 .work__description {
   padding-bottom: 1em;
 }
@@ -271,6 +280,110 @@ main {
   display: block;
 }
 
+.testimonials-container {
+  padding-top: 10em;
+}
+.testimonials-container-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  gap: 3%;
+}
+.testimonials__comment {
+  max-width: 365px;
+  padding: 3.5em 3em 2em 3em;
+  box-shadow: 0 3px 0.5em 1px rgb(224, 224, 224);
+  border-radius: 15px;
+}
+.testimonials__comment__person {
+  padding-bottom: 1.2em;
+}
+.testimonials__comment__content {
+  text-align: left;
+  font-size: 1.05em;
+}
+.testimonials__comment__name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.testimonials__comment__position {
+  margin-top: -1em;
+  font-size: 0.9em;
+}
+
+#footer {
+  max-width: 550px;
+}
+
+.footer {
+  padding-top: 12em;
+  text-align: center;
+}
+.footer__description {
+  display: grid;
+  justify-content: center;
+}
+.footer__gmail::before {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-image: url("images/mail.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.footer__number::before {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-image: url("images/phone.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.footer__gmail, .footer__number {
+  font-weight: 600;
+  color: black;
+  font-size: 2.3em;
+}
+.footer__gmail::after, .footer__number::after {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-image: url("images/squares.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 20px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.footer__more-info {
+  padding-top: 2em;
+}
+.footer__bottom-img {
+  padding: 0.2em;
+}
+.footer__bottom {
+  padding-top: 7em;
+  font-size: 0.9em;
+}
+.footer__bottom::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("images/C.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
 .underlined {
   text-decoration: underline;
 }
@@ -292,6 +405,13 @@ main {
     grid-template-columns: repeat(6, auto);
     justify-content: unset;
     gap: 0;
+  }
+  .testimonials-container-container {
+    grid-template-columns: auto;
+    gap: 5%;
+  }
+  .testimonials__comment {
+    max-width: 600px;
   }
 }
 @media (width < 768px) {
@@ -390,22 +510,15 @@ main {
     grid-template-columns: auto;
     gap: 0;
   }
-  .work-container-container {
-    display: grid;
-    justify-content: center;
+  .work-container {
+    text-align: left;
   }
   .work__img {
     width: 100%;
-    box-shadow: 0 3px 0.5em 1px rgb(224, 224, 224);
-    border-radius: 15px;
-    transition: transform 0.3s ease;
   }
   .work__img-container {
     grid-row: 1;
     padding-bottom: 5em;
-  }
-  .work__img:hover {
-    transform: scale(1.03);
   }
   .work__description {
     padding-bottom: 1em;
@@ -423,14 +536,39 @@ main {
   }
   .work__description__title {
     padding-bottom: 1em;
-    font-size: 1.3em;
-    font-weight: bold;
   }
   .work__description__link {
     padding-top: 1em;
-    display: block;
   }
   .content__description__list {
     grid-template-columns: auto;
+  }
+  .testimonials__comment {
+    max-width: 800px;
+  }
+  .footer {
+    padding-top: 16em;
+  }
+  .footer__description {
+    font-size: 0.9em;
+    padding: 1em;
+  }
+  .footer__gmail::before {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+  .footer__number::before {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+  .footer__gmail, .footer__number {
+    font-size: 1.2em;
+  }
+  .footer__gmail::after, .footer__number::after {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
   }
 }/*# sourceMappingURL=home.css.map */

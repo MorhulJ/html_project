@@ -205,6 +205,12 @@ main {
     &__name{
         font-size: 1.2em;
     }
+    &__img{
+        transition: transform 0.3s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
 }
 
 .expirience__site-container-container{
@@ -266,6 +272,9 @@ main {
         &:hover{
             transform: scale(1.03);
         }
+        &-container{
+            align-self: center;
+        }
     }
     &__description{
         padding-bottom: 1em;
@@ -288,6 +297,117 @@ main {
         &__link{
             padding-top: 1em;
             display: block;
+        }
+    }
+}
+
+.testimonials{
+    &-container{
+        padding-top: 10em;
+        &-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        gap: 3%;
+        }
+    }
+    &__comment{
+        max-width: 365px;
+        padding: 3.5em 3em 2em 3em;
+        box-shadow: 0 3px 0.5em 1px rgb(224, 224, 224);
+        border-radius: 15px;
+        &__person{
+            padding-bottom: 1.2em;
+        }
+        &__content{
+            text-align: left;
+            font-size: 1.05em;
+        }
+        &__name{
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        &__position{
+            margin-top: -1em;
+            font-size: 0.9em;
+        }
+    }
+}
+
+#footer{
+    max-width: 550px;
+}
+
+.footer{
+    padding-top: 12em;
+    text-align: center;
+    &__description{
+        display: grid;
+        justify-content: center;
+    }
+    &__gmail{
+        &::before{
+            content: "";
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-image: url('images/mail.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-right: 20px;
+            vertical-align: middle;
+        }
+    }
+    &__number{
+        &::before{
+            content: "";
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-image: url('images/phone.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-right: 20px;
+            vertical-align: middle;
+        }
+    }
+    &__gmail,
+    &__number{
+        font-weight: 600;
+        color: black;
+        font-size: 2.3em;
+        &::after{
+            content: "";
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-image: url('images/squares.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-left: 20px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    }
+    &__more-info{
+        padding-top: 2em;
+    }
+    &__bottom-img{
+        padding: 0.2em;
+    }
+    &__bottom{
+        padding-top: 7em;
+        font-size: 0.9em;
+        &::before{
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background-image: url('images/C.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-right: 5px;
+            vertical-align: middle;
         }
     }
 }
@@ -316,6 +436,17 @@ main {
             grid-template-columns: repeat(6, auto);
             justify-content: unset;
             gap: 0;
+        }
+    }
+    .testimonials{
+        &-container{
+            &-container{
+            grid-template-columns: auto;
+            gap: 5%;
+            }
+        }
+        &__comment{
+            max-width: 600px;
         }
     }
 }
@@ -439,50 +570,73 @@ main {
         margin-top: -2em;
         grid-template-columns: auto;
         gap: 0;
-        &-container{
-            &-container{
-                display: grid;
-                justify-content: center;
-            }
-        }
-        &__img{
-            width: 100%;
-            box-shadow: 0 3px 0.5em 1px rgb(224, 224, 224);
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-            &-container{
-                grid-row: 1;
-                padding-bottom: 5em;
-            }
-            &:hover{
-                transform: scale(1.03);
-            }
-        }
-        &__description{
-            padding-bottom: 1em;
-            &__element{
-                background-color: #e5e7eb;
-                border-radius: 1em;
-                padding: 0.3em 1.5em;
-                font-size: 0.9em;
-                display: inline-block;
-                margin-right: 0.5em;
-            }
             &-container{
                 text-align: left;
             }
-            &__title{
-                padding-bottom: 1em;
-                font-size: 1.3em;
-                font-weight: bold;
+            &__img{
+                width: 100%;
+                &-container{
+                    grid-row: 1;
+                    padding-bottom: 5em;
+                }
             }
-            &__link{
-                padding-top: 1em;
-                display: block;
+            &__description{
+                padding-bottom: 1em;
+                &__element{
+                    background-color: #e5e7eb;
+                    border-radius: 1em;
+                    padding: 0.3em 1.5em;
+                    font-size: 0.9em;
+                    display: inline-block;
+                    margin-right: 0.5em;
+                }
+                &-container{
+                    text-align: left;
+                }
+                &__title{
+                    padding-bottom: 1em;
+                }
+                &__link{
+                    padding-top: 1em;
+                }
             }
         }
-    }
     .content__description__list {
         grid-template-columns: auto;
+    }
+    .testimonials{
+        &__comment{
+            max-width: 800px;
+        }
+    }
+    .footer{
+        padding-top: 16em;
+        &__description{
+            font-size: 0.9em;
+            padding: 1em;
+        }
+        &__gmail{
+            &::before{
+                width: 25px;
+                height: 25px;
+                margin-right: 5px;
+            }
+        }
+        &__number{
+            &::before{
+                width: 25px;
+                height: 25px;
+                margin-right: 5px;
+            }
+        }
+        &__gmail,
+        &__number{
+            font-size: 1.2em;
+            &::after{
+                width: 25px;
+                height: 25px;
+                margin-left: 5px;
+            }
+        }
     }
 }
