@@ -1,12 +1,12 @@
 :root{
-    --secondary-color: white;
-    --navbar-color: rgba(255, 255, 255, 0.8);
-    --main-font-color: rgba(0, 0, 0, 0.7);
-    --secondary-font-color: black;
-    --bg-color: black;
-    --img-shadow-color: #e5e7eb;
-    --main-color: white;
-    --shadow-color: rgb(224, 224, 224);
+    --secondary-color: #030712;
+    --navbar-color: rgba(0, 5, 15, 0.8);
+    --main-font-color: #c4d5db;
+    --secondary-font-color: white;
+    --bg-color: rgb(255, 255, 255);
+    --img-shadow-color: #374151;
+    --main-color: #030712;
+    --shadow-color: rgb(0, 0, 0);
 }
 
 body {
@@ -25,7 +25,6 @@ main {
 }
 
 .navbar {
-    color: var(--secondary-color);
     z-index: 1;
     position: sticky;
     top: 0;
@@ -40,6 +39,7 @@ main {
 }
 
 .navbar-brand {
+    color: var(--secondary-font-color);
     font-size: 30px;
     font-weight: bold;
 }
@@ -48,6 +48,13 @@ main {
     align-self: center;
     padding-right: 0.5em;
     font-weight: 550;
+}
+
+.nav-link{
+    color: var(--secondary-font-color);
+    &:hover{
+        color: rgb(206, 206, 206);
+    }
 }
 
 .nav-download {
@@ -236,6 +243,7 @@ main {
     }
     &__site{
         &-container{
+            background-color: #1f2937;
             box-shadow: 0 3px 0.5em 1px var(--shadow-color);
             border-radius: 15px;
             display: grid;
@@ -261,6 +269,7 @@ main {
 }
 
 .work{
+    background-color: #1f2937;
     display: grid;
     grid-template-columns: auto auto;
     box-shadow: 0 3px 0.5em 1px var(--shadow-color);
@@ -323,6 +332,7 @@ main {
         }
     }
     &__comment{
+        background-color: #1f2937;
         max-width: 365px;
         padding: 3.5em 3em 2em 3em;
         box-shadow: 0 3px 0.5em 1px var(--shadow-color);
@@ -362,7 +372,7 @@ main {
             display: inline-block;
             width: 35px;
             height: 35px;
-            background-image: url('images/mail.png');
+            background-image: url('images/dark-mail.png');
             background-size: cover;
             background-repeat: no-repeat;
             margin-right: 20px;
@@ -375,7 +385,7 @@ main {
             display: inline-block;
             width: 35px;
             height: 35px;
-            background-image: url('images/phone.png');
+            background-image: url('images/dark-phone.png');
             background-size: cover;
             background-repeat: no-repeat;
             margin-right: 20px;
@@ -387,14 +397,14 @@ main {
         display: block;
         text-decoration: none;
         font-weight: 600;
-        color: black;
+        color: rgb(255, 255, 255);
         font-size: 2.3em;
         &::after{
             content: "";
             display: inline-block;
             width: 35px;
             height: 35px;
-            background-image: url('images/squares.png');
+            background-image: url('images/dark-squares.png');
             background-size: cover;
             background-repeat: no-repeat;
             margin-left: 20px;
@@ -416,7 +426,7 @@ main {
             display: inline-block;
             width: 18px;
             height: 18px;
-            background-image: url('images/C.png');
+            background-image: url('images/dark-C.png');
             background-size: cover;
             background-repeat: no-repeat;
             margin-right: 5px;
