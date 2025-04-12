@@ -463,7 +463,7 @@ main {
   .entering__title {
     font-weight: bold;
     font-size: 2.3em;
-    color: black;
+    color: var(--secondary-font-color);
   }
   .entering__description {
     padding-bottom: 1.5em;
