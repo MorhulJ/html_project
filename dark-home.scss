@@ -43,7 +43,7 @@ main {
 }
 
 .navbar-brand {
-    color: var(--secondary-font-color);
+    color: var(--secondary-font-color) !important;
     font-size: 30px;
     font-weight: bold;
 }
@@ -435,6 +435,7 @@ main {
             background-repeat: no-repeat;
             margin-right: 5px;
             vertical-align: middle;
+            margin-bottom: 0.3em;
         }
     }
 }
